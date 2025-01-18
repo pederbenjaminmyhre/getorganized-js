@@ -95,3 +95,12 @@ th {
 #edit-record-details th {
     background-color: #f4f4f4;
 }
+
+#edit-record-details td:first-child {
+    white-space: nowrap; /* Prevent wrapping of content */
+    width: auto; /* Automatically size based on content */
+}
+
+#edit-record-details td:last-child {
+    width: 100%; /* Fill remaining space */
+}
