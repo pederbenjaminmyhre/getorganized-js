@@ -173,23 +173,6 @@ const createRow = (record, indent = 0) => {
     return row;
 };
 
-const populateTable = (records) => {
-    const tableBody = document.querySelector('#data-table tbody');
-    records.forEach(record => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${record.id}</td>
-            <td>${record.name}</td>
-            <td>${record.parentId}</td>
-            <td>${record.treeLevel}</td>
-            <td>${record.hasChildren}</td>
-            <td>${record.detailedText}</td>
-            <td>${record.customSort}</td>
-        `;
-        tableBody.appendChild(row);
-    });
-};
-
 const records = generateSampleRecords();
 const rootRecords = records.filter(record => record.parentId === 0);
 
@@ -200,5 +183,3 @@ rootRecords.forEach(record => {
     container.appendChild(row);
 });
 
-// Populate data-table
-populateTable(records);
